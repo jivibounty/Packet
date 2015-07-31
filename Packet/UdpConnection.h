@@ -43,10 +43,10 @@ namespace Packet
 		virtual ~UdpConnection();
 
 		//sends data packet to destination
-		bool send(const Address& destination, char* data, int dataSize);
+		bool send(const Address& destination, const char* data, int dataSize);
 		
 		//sends data packet reliably to destination
-		bool sendReliable(const Address& destination, char* data, int dataSize);
+		bool sendReliable(const Address& destination, const char* data, int dataSize);
 		
 		//receives data packet
 		int receive(Address& source, char* data, int dataSize, bool& bIsTerminalMessage);

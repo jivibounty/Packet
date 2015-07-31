@@ -62,12 +62,12 @@ namespace Packet
 		UdpConnection::update(dt);
 	}
 
-	bool UdpServer::sendPacket(const Address& destination, char* data, int dataSize)
+	bool UdpServer::sendPacket(const Address& destination, const char* data, int dataSize)
 	{
 		return send(destination, data, dataSize);
 	}
 
-	bool UdpServer::sendReliablePacket(const Address& destination, char* data, int dataSize)
+	bool UdpServer::sendReliablePacket(const Address& destination, const char* data, int dataSize)
 	{
 		return sendReliable(destination, data, dataSize);
 	}

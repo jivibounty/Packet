@@ -44,12 +44,12 @@ namespace Packet
 		UdpConnection::update(dt);
 	}
 
-	bool UdpClient::sendPacket(char* data, int dataSize)
+	bool UdpClient::sendPacket(const char* data, int dataSize)
 	{
 		return send(m_ServerAddress, data, dataSize);
 	}
 
-	bool UdpClient::sendReliablePacket(char* data, int dataSize)
+	bool UdpClient::sendReliablePacket(const char* data, int dataSize)
 	{
 		return sendReliable(m_ServerAddress, data, dataSize);
 	}

@@ -28,7 +28,7 @@ namespace Packet
 		m_fPacketTimeOut = fPacketTimeOut;
 	}
 
-	bool UdpReliability::send(const Address& destination, char* data, int dataSize, unsigned int sequenceNumber)
+	bool UdpReliability::send(const Address& destination, const char* data, int dataSize, unsigned int sequenceNumber)
 	{
 		assert(data);
 		assert(dataSize > 0);
@@ -105,7 +105,7 @@ namespace Packet
 	{
 	}
 
-	UdpReliability::DataPacket::DataPacket(const Address& address, char* data, int dataSize, unsigned int sequenceNumber, float fAge)
+	UdpReliability::DataPacket::DataPacket(const Address& address, const char* data, int dataSize, unsigned int sequenceNumber, float fAge)
 	{
 		m_Address = address;
 		memcpy(m_Data, data, dataSize);

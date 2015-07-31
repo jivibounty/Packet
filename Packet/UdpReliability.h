@@ -25,7 +25,7 @@ namespace Packet
 		float getPacketTimeOut() const { return m_fPacketTimeOut; }
 
 		//send data packet reliably to destination
-		bool send(const Address& destination, char* data, int dataSize, unsigned int sequenceNumber);
+		bool send(const Address& destination, const char* data, int dataSize, unsigned int sequenceNumber);
 
 		//removes data packet with sequence number from storage
 		void remove(unsigned int sequenceNumber);
@@ -41,7 +41,7 @@ namespace Packet
 		{
 		public:
 			DataPacket();
-			DataPacket(const Address& address, char* data, int dataSize, unsigned int sequenceNumber, float fAge);
+			DataPacket(const Address& address, const char* data, int dataSize, unsigned int sequenceNumber, float fAge);
 			Address m_Address;
 			char m_Data[MAX_RUDP_DATA_SIZE];
 			int m_DataSize;

@@ -78,7 +78,7 @@ namespace Packet
 		m_pUdpReliability->update(dt);
 	}
 
-	bool UdpConnection::send(const Address& destination, char* data, int dataSize)
+	bool UdpConnection::send(const Address& destination, const char* data, int dataSize)
 	{
 		if(m_pUdp == NULL)
 		{
@@ -103,7 +103,7 @@ namespace Packet
 		return m_pUdp->send(destination, sendData, dataSize + offset);
 	}
 
-	bool UdpConnection::sendReliable(const Address& destination, char* data, int dataSize)
+	bool UdpConnection::sendReliable(const Address& destination, const char* data, int dataSize)
 	{
 		if(m_pUdp == NULL || m_pUdpReliability == NULL)
 		{

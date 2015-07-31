@@ -33,10 +33,10 @@ namespace Packet
 		virtual void update(float dt);
 
 		//sends data packet to destination
-		bool sendPacket(const Address& destination, char* data, int dataSize);
+		bool sendPacket(const Address& destination, const char* data, int dataSize);
 		
 		//sends data packet reliably to destination
-		bool sendReliablePacket(const Address& destination, char* data, int dataSize);
+		bool sendReliablePacket(const Address& destination, const char* data, int dataSize);
 		
 		//receive data packet from a client
 		int receivePacket(Address& source, char* data, int dataSize);
