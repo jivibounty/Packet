@@ -35,7 +35,7 @@
 #endif
 
 #ifndef SAFE_RELEASE_VECTOR
-#define SAFE_RELEASE_VECTOR(ptr) for(Bounty::uint32 n = 0; n < ptr.size(); ++n){ SAFE_RELEASE(ptr[n]);} ptr.clear();
+#define SAFE_RELEASE_VECTOR(ptr) for(unsigned int n = 0; n < ptr.size(); ++n){ SAFE_RELEASE(ptr[n]);} ptr.clear();
 #endif
 
 #ifndef SAFE_ASSIGN
@@ -51,11 +51,11 @@
 #endif
 
 #ifndef SAFE_DELETE_VECTOR
-#define SAFE_DELETE_VECTOR(ptr) for(Bounty::uint32 n = 0; n < ptr.size(); ++n) {SAFE_DELETE(ptr[n]);} ptr.clear();
+#define SAFE_DELETE_VECTOR(ptr) for(unsigned int n = 0; n < ptr.size(); ++n) {SAFE_DELETE(ptr[n]);} ptr.clear();
 #endif
 
 #ifndef SAFE_DELETE_ARRAY_VECTOR
-#define SAFE_DELETE_ARRAY_VECTOR(ptr) for(Bounty::uint32 n = 0; n < ptr.size(); ++n) {SAFE_DELETE_ARRAY(ptr[n]);} ptr.clear();
+#define SAFE_DELETE_ARRAY_VECTOR(ptr) for(unsigned int n = 0; n < ptr.size(); ++n) {SAFE_DELETE_ARRAY(ptr[n]);} ptr.clear();
 #endif
 
 #ifndef SAFE_DELETE
